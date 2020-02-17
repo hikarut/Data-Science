@@ -13,5 +13,5 @@ $ dc exec data-science bash
 
 * jupyter起動
 ```
-# jupyter notebook --port 10000 --allow-root
+# jupyter lab --port 10000 --allow-root
 ```
