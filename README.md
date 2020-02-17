@@ -1,4 +1,4 @@
-# Data-Science Set up
+# Data-Science for JupyterLab
 ※`dc` = `docker-compose`
 
 * ビルド
