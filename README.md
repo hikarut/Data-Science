@@ -9,11 +9,13 @@ $ dc up -d --build
 * 起動
 ```
 $ dc exec data-science bash
+
+# jupyter lab --port 10000 --allow-root
 ```
 
-* jupyter起動
+* 起動
 ```
-# jupyter lab --port 10000 --allow-root
+$ dc exec data-science bash -c "jupyter lab --port 10000 --allow-root"
 ```
 
 # 統計的データ分析
