@@ -8,13 +8,6 @@ $ dc up -d --build
 
 * 起動
 ```
-$ dc exec data-science bash
-
-# jupyter lab --port 10000 --allow-root
-```
-
-* 起動
-```
 $ dc exec data-science bash -c "jupyter lab --port 10000 --allow-root"
 ```
 
