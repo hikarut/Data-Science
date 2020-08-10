@@ -15,6 +15,12 @@ RUN pip install graphviz
 RUN jupyter serverextension enable --py jupyterlab
 RUN jupyter labextension install jupyterlab_vim
 
+# nbextension
+RUN pip install jupyter-contrib-nbextensions
+RUN pip install jupyter-nbextensions-configurator
+RUN jupyter contrib nbextension install --user
+RUN jupyter nbextensions_configurator enable --user
+
 EXPOSE 10000
 CMD ["bash"]
 #CMD ["jupyter lab --port 10000 --allow-root"]
