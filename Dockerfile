@@ -21,6 +21,9 @@ RUN pip install jupyter-nbextensions-configurator
 RUN jupyter contrib nbextension install --user
 RUN jupyter nbextensions_configurator enable --user
 
+# CausalImpact
+RUN pip install pycausalimpact
+
 EXPOSE 10000
 CMD ["bash"]
 #CMD ["jupyter lab --port 10000 --allow-root"]
