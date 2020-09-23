@@ -24,6 +24,20 @@ RUN jupyter nbextensions_configurator enable --user
 # CausalImpact
 RUN pip install pycausalimpact
 
+# Text
+RUN pip install wordcloud
+RUN pip install mecab-python3==0.996.5
+RUN apt-get update \
+    && apt-get install -y mecab \
+    && apt-get install -y mecab-ipadic \
+    && apt-get install -y libmecab-dev \
+    && apt-get install -y mecab-ipadic-utf8 \
+    && apt-get install -y swig \
+    && apt-get install -y file
+RUN git clone --depth 1 https://github.com/neologd/mecab-ipadic-neologd.git \
+    && cd mecab-ipadic-neologd \
+    && bin/install-mecab-ipadic-neologd -n -y
+
 EXPOSE 10000
 CMD ["bash"]
 #CMD ["jupyter lab --port 10000 --allow-root"]
