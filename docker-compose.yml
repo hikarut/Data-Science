@@ -10,4 +10,5 @@ services:
     tty: true
     volumes:
         - ./notebooks:/root/notebooks/
+        - ./script:/root/script/
         - ~/Library/Fonts:/root/fonts/
