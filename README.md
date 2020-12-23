@@ -6,9 +6,14 @@
 $ dc up -d --build
 ```
 
-* 起動
+* Jupyter起動
 ```
 $ dc exec data-science bash -c "jupyter lab --port 10000 --allow-root"
+```
+
+* スクリプトの実行
+```
+$ dc exec data-science bash -c "python script/sample.py"
 ```
 
 # 統計的データ分析
