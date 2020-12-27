@@ -38,6 +38,10 @@ RUN git clone --depth 1 https://github.com/neologd/mecab-ipadic-neologd.git \
     && cd mecab-ipadic-neologd \
     && bin/install-mecab-ipadic-neologd -n -y
 
+# SpreadSheet
+RUN pip install gspread
+RUN pip install oauth2client
+
 EXPOSE 10000
 CMD ["bash"]
 #CMD ["jupyter lab --port 10000 --allow-root"]
